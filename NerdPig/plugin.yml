@@ -1,0 +1,8 @@
+name: NerdPig
+main: me.hammale.pig.pig
+version: 1.0
+commands:
+  npchide:
+    description:
+    usage: |
+depend: [Citizens, MobDisguise]
