@@ -1,7 +1,6 @@
 package me.hammale.pig;
 
 import java.io.*;
-import java.io.PrintWriter;
 import java.util.logging.Logger;
 
 import org.bukkit.ChatColor;
@@ -15,6 +14,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+
 import net.citizensnpcs.api.CitizensManager;
 import net.citizensnpcs.resources.npclib.*;
 
@@ -43,6 +43,7 @@ public class pig extends JavaPlugin {
 	        System.out.println("[NerdPig] MobDisguise isn't loaded.");
 	        pm.disablePlugin(this);
 	    }
+	    getServer().getPluginManager().registerEvents(new pigEntity(this), this);
 	    createFolders();
 	    fixNpc();
 	}
